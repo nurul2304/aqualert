@@ -1,23 +1,14 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\OperatorController;
+use App\Http\Controllers\PublicController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Operator Routes
+Route::get('/dashboard', [OperatorController::class, 'dashboard'])->name('dashboard');
+Route::get('/visualdata', [OperatorController::class, 'visualdata'])->name('visualdata');
+Route::get('/laporan-masuk', [OperatorController::class, 'laporanMasuk'])->name('laporan-masuk');
+Route::get('/notifikasi', [OperatorController::class, 'notifikasi'])->name('notifikasi');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
-
-Route::get('/visualdata', function () {
-    return view('visualdata');
-})->name('visualdata');
-
-Route::get('/laporan', function () {
-    return view('laporan');
-})->name('laporan');
-
-Route::get('/notifikasi', function () {
-    return view('notifikasi');
-})->name('notifikasi');
+// Public Routes
+Route::get('/add-report', [PublicController::class, 'addReport'])->name('add-report');
+Route::get('/report-list', [PublicController::class, 'reportList'])->name('report-list');
