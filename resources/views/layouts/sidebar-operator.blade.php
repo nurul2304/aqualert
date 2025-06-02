@@ -57,28 +57,28 @@
     </aside>
 
     <!-- Toggle button (mobile) -->
-    <button id="menu-toggle" class="md:hidden fixed top-4 right-4 z-50 bg-white shadow p-2 rounded">
-      <i class="fas fa-bars text-2xl"></i>
-    </button>
+<button id="menu-toggle" class="md:hidden fixed top-4 right-4 z-50 bg-white shadow p-2 rounded">
+  <i class="fas fa-bars text-2xl"></i>
+</button>
 
-    <!-- Main Content -->
-    <main class="flex-1 overflow-y-auto md:ml-0 p-4 md:p-8">
-      <div class="text-left">
-        @yield('content')
-      </div>
-    </main>
+<!-- Main content -->
+<main class="flex-1 overflow-y-auto md:ml-64 p-4 md:p-8 relative z-10">
+  <div class="text-left">
+    @yield('content')
   </div>
+</main>
 
-  <script>
-    const toggleBtn = document.getElementById('menu-toggle');
-    const sidebar = document.getElementById('sidebar');
+<!-- Toggle Script -->
+<script>
+  const toggleBtn = document.getElementById('menu-toggle');
+  const sidebar = document.getElementById('sidebar');
 
-    toggleBtn.addEventListener('click', () => {
-      sidebar.classList.toggle('translate-x-full');
-      sidebar.classList.toggle('translate-x-0');
-    });
-  </script>
+  toggleBtn.addEventListener('click', () => {
+    sidebar.classList.toggle('translate-x-full');
+    sidebar.classList.toggle('translate-x-0');
+  });
+</script>
 
-  @yield('scripts') {{-- ✅ Ini penting agar script chart dari laporan.blade bisa dieksekusi --}}
+@yield('scripts')
 </body>
 </html>
