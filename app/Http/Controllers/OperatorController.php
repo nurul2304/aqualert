@@ -16,7 +16,7 @@ class OperatorController extends Controller
         return view('operator.laporan-masuk');
     }
 
-    public function index()
+    public function visualData()
     {
     return view('operator.visualdata'); // pastikan file views/operator/visualdata.blade.php ada
     }
