@@ -25,55 +25,57 @@
   <!-- Report List -->
   <div class="bg-white p-6 rounded-lg shadow mb-8 mb-8 overflow-x-auto">
     <h3 class="text-lg font-bold mb-4">Report List</h3>
-    <table class="w-full text-left">
+    <table class="min-w-full text-left border-collapse">
       <thead>
-        <tr class="text-gray-600 border-b">
+        <tr class="text-gray-700 border-b">
           <th class="py-2">User Name</th>
-          <th>Location</th>
-          <th>Date - Time</th>
-          <th>Description</th>
-          <th>Status</th>
+          <th class="py-2">Location</th>
+          <th class="py-2">Date - Time</th>
+          <th class="py-2">Description</th>
+          <th class="py-2">Status</th>
         </tr>
       </thead>
       <tbody>
-        <tr class="border-b">
+        <tr class="border-b hover:bg-gray-100">
           <td class="py-2">Apple Watch</td>
-          <td>6096 Marjolaine Landing</td>
-          <td>12.09.2019 - 12.53 PM</td>
-          <td>Ada kebocoran pipa di perumahan Buana Raya ...</td>
-          <td><span class="bg-red-500 text-white px-2 py-1 rounded text-sm">Urgent</span></td>
+          <td class="py-2">6096 Marjolaine Landing</td>
+          <td class="py-2">12.09.2019 - 12.53 PM</td>
+          <td class="py-2">Ada kebocoran pipa di perumahan Buana Raya ...</td>
+          <td class="py-2"><span class="bg-red-500 text-white px-2 py-1 rounded text-sm">Urgent</span></td>
         </tr>
       </tbody>
     </table>
   </div>
 
   <!-- Sensor Details -->
-  <div class="bg-white p-6 rounded-lg shadow">
+  <div class="bg-white p-6 rounded-lg shadow overflow-x-auto">
     <h3 class="text-lg font-bold mb-4">Sensor Details</h3>
-    <table class="w-full text-left">
-      <thead>
-        <tr class="text-gray-600 border-b">
-          <th class="py-2">Device Name</th>
-          <th>Location</th>
-          <th>Date - Time</th>
-          <th>Turbidity</th>
-          <th>TDS</th>
-          <th>pH</th>
-          <th>Status</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="border-b">
-          <td class="py-2">Apple Watch</td>
-          <td>N 1° 8' 45.0744", E 103° 37' 59.7108"</td>
-          <td>12.09.2019 - 12.53 PM</td>
-          <td>20 NTU</td>
-          <td>423</td>
-          <td>pH 6</td>
-          <td><span class="bg-green-500 text-white px-2 py-1 rounded text-sm">Good</span></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+    <div class="overflow-x-auto">
+            <table class="min-w-full text-left border-collapse">
+                <thead>
+                    <tr class="text-gray-700 border-b">
+                        <th class="p-2">Device Name</th>
+                        <th class="p-2">Location</th>
+                        <th class="p-2">Date - Time</th>
+                        <th class="p-2">Turbidity</th>
+                        <th class="p-2">TDS</th>
+                        <th class="p-2">pH</th>
+                        <th class="p-2">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for ($i = 0; $i < 3; $i++)
+                    <tr class="border-b hover:bg-gray-100">
+                        <td class="p-2 flex items-center gap-2"><span>⌚</span> Apple Watch</td>
+                        <td class="p-2">N 1° 8' 45.0744", E 104° ...</td>
+                        <td class="p-2">12.09.2019 - 12:53 PM</td>
+                        <td class="p-2">20 NTU</td>
+                        <td class="p-2">230</td>
+                        <td class="p-2">pH 6.5</td>
+                        <td class="p-2"><span class="bg-green-500 text-white text-xs px-2 py-1 rounded">Good</span></td>
+                    </tr>
+                    @endfor
+                </tbody>
+            </table>
+        </div>
 @endsection
-
