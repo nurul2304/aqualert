@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@import "@tailwind components";
+@import "@tailwind utilities";
+
+/* Tambahkan di bawah ini */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+/* public/css/custom.css */
+.bg-hero {
+  background-image: url('/images/bg_landingpage2.png');
+}
+
